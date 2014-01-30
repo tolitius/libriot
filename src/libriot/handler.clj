@@ -1,14 +1,14 @@
 (ns libriot.handler
-  (:require ;; [libriot :refer []]
+  (:require [libriot :refer [book-search]]
             [libriot.layout 
-             ;;[create :refer [create-libriot]]
+             [create :refer [add-book]]
              ]
             [compojure.core :refer :all]
             [compojure.handler :as handler]
             [compojure.route :as route]))
 
 (defroutes app-routes
-  (GET "/" [] (search-libriot))
+  (GET "/" [] (book-search))
   ;; ...
   (route/resources "/")
   (route/not-found "not found"))
