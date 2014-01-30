@@ -1,0 +1,33 @@
+;; libriot universe
+
+[
+
+ ;; {:db/id #db/id [:db.part/tx] 
+ ;;  :db/txInstant #inst "2014-05-01T13:09:09.009-00:00"}
+
+  ;;                                                title
+  ;; =======================================================
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :book/title
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/fulltext true
+   :db/index true
+   :db/doc "book title"
+   :db.install/_attribute :db.part/db}
+
+  ;;                                               author
+  ;; =======================================================
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :book/author
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/fulltext true
+   :db/doc "author's name"
+   :db.install/_attribute :db.part/db}
+ 
+   ;; ...
+]
+

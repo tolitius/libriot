@@ -1,0 +1,199 @@
+.center {
+    text-align: center;
+}
+
+.q-hidden {
+    display: none;
+}
+
+/* .libriot-font { */
+/*     font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif; */
+/* } */
+
+.create-libriot {
+    font-family: fantasy, inherit;
+}
+
+.c-header {
+    background: rgba(221, 182, 157, 0.1);
+    padding-bottom: 10px;
+}
+
+.o-footer {
+    background: rgba(150, 95, 60, 0.3);
+    padding-bottom: 140px;
+    margin-bottom: 0px;
+}
+
+.a-header {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.o-label {
+    margin-bottom: -6px;
+    text-align: right;
+}
+
+.o-label .label-success {
+    background-color: rgba(173, 98, 56, 0.44);
+    margin-right: 31px;
+}
+
+.prezi-name {
+    font-size: 3em;
+    color: rgba(78, 68, 57, 1);
+    margin: 14px 0px 4px;
+}
+
+.q-title {
+    font-size: 2em;
+    color: rgba(49, 36, 29, 0.77);
+    margin: 20px 0px 10px;
+}
+
+#prezi-input, #q-input {
+    height: 53px;
+    font-size: 22px;
+}
+
+#q-input {
+    color: rgba(49, 36, 29, 0.77);
+}
+
+.cal-icon {
+  font-size: 33px;
+  background-color: rgba(121, 32, 4, 0.09);
+  color: rgba(78, 68, 57, 1);
+}
+
+.cal-icon:hover {
+    font-size: 33px;
+    background-color: rgba(121, 32, 4, 0.15);
+    cursor: pointer;
+    color: rgba(61, 56, 50, 1);
+}
+
+#new-libriot {
+    margin: 12px 0px 21px;
+}
+
+.libriot-color {
+    color: rgba(163, 91, 68, 0.73);
+    /* color: rgba(255, 82, 0, 0.76); */
+    /* color: rgba(0, 0, 0, 0.29) */
+}
+
+.libriot-link {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.libriot-link:hover {
+    color: rgb(150, 65, 17);
+    background: rgba(255, 184, 0, 0.3);
+}
+
+.libriot-info a:hover {
+    text-decoration: none;
+}
+
+.qa-header {
+    padding: 10px 0px;
+    margin-bottom: 0px;
+    background: rgba(221, 182, 157, 0.1);
+    font-size: 15px;
+    color: rgba(163, 91, 68, 0.34);
+}
+
+.qa-header span {
+    padding: 0px 25px;
+}
+
+.qa-conf-name {
+    line-height: 0px;
+}
+
+.qa-title-header {
+    border-left: solid 1px rgba(163, 57, 7, 0.28);
+    border-right: solid 1px rgba(163, 57, 7, 0.28);
+    font-size: 25px;
+    color: rgba(163, 91, 68, 0.63);
+}
+
+.vote-up {
+    line-height: 23px;
+    border-right: solid 2px rgba(163, 76, 13, 0.18);
+    padding-left: 0px;
+    padding-right: 9px;
+    margin-left: 10px;
+    width: 47px;
+}
+
+.vote-up i {
+    margin-bottom: 2px;
+    color: rgba(138, 62, 56, 0.61);
+}
+
+.vup > i:hover, .vup:hover {
+    cursor: pointer;
+    color: rgba(138, 62, 56, 0.86);
+}
+
+.v-rank {
+    font-size: 23px;
+    padding-bottom: 3px;
+    color: rgba(138, 62, 56, 0.61);
+}
+
+.q-text {
+    text-align: left;
+    line-height: normal;
+    color: rgba(122, 38, 5, 0.77);
+    display: table;
+    min-height: 50px;
+}
+
+.q-text span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.q-panel {
+    padding-left: 0px;
+}
+
+.qa-footer {
+    padding-bottom: 550px;
+    margin-bottom: 0px;
+    padding-top: 28px;
+    margin-top: 10px;
+    background: rgba(150, 95, 60, 0.3);
+}
+
+::-webkit-input-placeholder {
+   text-align:center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align:center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align:center;  
+}
+
+:-ms-input-placeholder {  
+   text-align:center; 
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .vote-up {float: left;}
+}
+
+@media (max-width: 767px) {
+    .vote-up {float: left;}
+}

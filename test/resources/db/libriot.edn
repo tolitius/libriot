@@ -1,0 +1,16 @@
+[
+  ;; {:db/id #db/id [:db.part/tx]
+  ;; :db/txInstant #inst "2013-05-09T13:09:09.009-00:00"}
+
+  ;; add dates (e.g. instant(s))
+
+ {:db/id #db/id [:libriot]
+  :book/title "Java Puzzlers"
+  ;...
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Joy of Clojure"
+  ;...
+  }
+]
