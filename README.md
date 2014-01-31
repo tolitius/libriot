@@ -20,8 +20,8 @@ available at some public URL or whatever.
 bought it from to get the updated files.
 
 * Each book is bought by one e-mail account, which may be a generic
-one (ebooks@chariotsolutions.com) or may be an individual's
-(ammulder@chariotsolutions.com). Only that address gets "push"
+one (ebooks@libriot.com) or may be an individual's
+(angelina.jolie@libriot.com). Only that address gets "push"
 notifications when new revisions or errata or revised code samples are
 available.
 
