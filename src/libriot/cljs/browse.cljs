@@ -1,4 +1,4 @@
-(ns libriot.create
+(ns libriot.browsing
   (:require [libriot.thingies :refer [fade-out-in info info->js]]
             [jayq.core :as jq]
             [cljs.reader :as reader])
@@ -6,7 +6,14 @@
   (:use-macros [crate.def-macros :only [defpartial]]))
 
 
-(def $add-book ($ :.add-book-btn))
+(def $t-books ($ :.t-books))
+
+(.dataTable $t-books 
+  (clj->js {:sAjaxSource "/browse"
+            :aoColumns [{:mData "title"}
+                        {:mData "whereabouts"}
+                        {:mData "rating"}]}))
+            ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))
 
 (defn show-library [data]
   (let [details (reader/read-string data)]
@@ -19,16 +26,3 @@
             :data isbn
             :type "POST"
             :success show-library}))
-
-(jq/on $add-book :click
-  (fn [e]
-    (.preventDefault e)
-    (add-book "13")))
-
-(jq/on $add-book :keydown
-  (fn [e]
-    (if (= (.-keyCode e) 13)
-      (do
-        (.preventDefault e)
-        (.click $add-book)))))
-

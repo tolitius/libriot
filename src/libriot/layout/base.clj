@@ -7,6 +7,7 @@
   (list
    (include-css "/bootstrap/css/bootstrap.css")
    (include-css "/bootstrap/css/bootstrap-theme.css")
+   (include-css "/css/dataTables.bootstrap.css")
    (include-css "/css/font-awesome.min.css")
    (include-css "/css/libriot.css")))
 
@@ -14,6 +15,8 @@
   (list
    (include-js "/js/jquery-1.10.2.min.js")
    (include-js "/bootstrap/js/bootstrap.js")
+   (include-js "/js/jquery.dataTables.js")
+   (include-js "/js/dataTables.bootstrap.js")
    (include-js "/js/libriot.js")))
 
 (defn in-container [{:keys [container-class jumbo-class]} & content]
