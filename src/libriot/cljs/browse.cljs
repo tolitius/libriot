@@ -2,7 +2,7 @@
   (:require [libriot.thingies :refer [fade-out-in info info->js]]
             [jayq.core :as jq]
             [cljs.reader :as reader])
-  (:use [jayq.core :only [$ html add-class]])
+  (:use [jayq.core :only [$ html add-class remove-attr]])
   (:use-macros [crate.def-macros :only [defpartial]]))
 
 
@@ -23,7 +23,8 @@
                         {:mData "whereabouts"}
                         {:mData "rating" :sWidth "128px"}]
             :oLanguage {:sLengthMenu ""}
-            :fnRowCallback star-rating}))
+            :fnRowCallback star-rating
+            :fnInitComplete (fn [] (remove-attr $t-books "style"))}))
             ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))
 
 (defn show-library [data]
