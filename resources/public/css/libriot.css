@@ -9,6 +9,7 @@
 .rating {
     color: rgba(128, 128, 128, 0.72);
     font-size: 0.8em;
+    min-width: 128px;
 }
 
 /* .libriot-font { */
