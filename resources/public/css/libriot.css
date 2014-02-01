@@ -6,6 +6,11 @@
     display: none;
 }
 
+.rating {
+    color: rgba(128, 128, 128, 0.72);
+    font-size: 0.8em;
+}
+
 /* .libriot-font { */
 /*     font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif; */
 /* } */

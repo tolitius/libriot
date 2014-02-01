@@ -3,11 +3,11 @@
 
 (defn header []
   (in-container {:container-class "browse" :jumbo-class "c-header"}
-    [:div.row.center "da book"]))
+    [:div.row.center "it's a wonbooking life"]))
 
 (def t-books
   (in-container {:container-class "c-books"}
-    [:div.row.center
+    [:div.row
       [:table.table.table-striped.table-bordered.t-books
        [:thead
         [:tr

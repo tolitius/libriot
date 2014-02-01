@@ -10,7 +10,7 @@
   (let [dt (parse (formatters :year-month-day) d)]
     (unparse (formatter "dd MMMM yyyy") dt)))
 
-(defn book-search [] "da book")
+(defn book-search [] "where books live a full life")
 
 (defn find-all []
   (json/write-str {:id -1 

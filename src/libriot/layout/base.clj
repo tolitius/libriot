@@ -15,6 +15,7 @@
   (list
    (include-js "/js/jquery-1.10.2.min.js")
    (include-js "/bootstrap/js/bootstrap.js")
+   (include-js "/js/jquery.raty.js")
    (include-js "/js/jquery.dataTables.js")
    (include-js "/js/dataTables.bootstrap.js")
    (include-js "/js/libriot.js")))
