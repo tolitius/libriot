@@ -6,10 +6,37 @@
     display: none;
 }
 
+.t-books th i {
+    margin: 0px 8px;
+    font-size: 1.2em;
+    color: rgba(128, 128, 128, 0.52);;
+}
+
 .rating {
     color: rgba(128, 128, 128, 0.72);
     font-size: 0.8em;
     min-width: 128px;
+    padding-top: 10px !important;
+}
+
+.contact-link, .lend-link {
+    font-size: 1.5em;
+    color: rgba(240, 64, 9, 0.68);
+    padding: 2px 0px 2px 1px !important;
+}
+
+.contact-link:hover {
+    cursor: pointer;
+    color: rgba(240, 64, 9, 0.84);
+}
+
+.lend-link {
+    color: rgba(6, 131, 6, 0.8);
+}
+
+.lend-link:hover {
+    cursor: pointer;
+    color: rgba(6, 131, 6, 1);
 }
 
 /* .libriot-font { */

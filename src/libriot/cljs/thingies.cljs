@@ -1,5 +1,6 @@
 (ns libriot.thingies
-  (:require [jayq.core :as jq])
+  (:require [jayq.core :as jq]
+            [crate.core :as crate])
   (:use [jayq.core :only [$]])
   (:use-macros [crate.def-macros :only [defpartial]]))
 

@@ -11,9 +11,11 @@
       [:table.table.table-striped.table-bordered.t-books
        [:thead
         [:tr
-         [:th "Title"]
-         [:th "Whereabouts"]
-         [:th "Rating"]]]]]))
+         [:th [:i.fa.fa-book] " Title"]
+         [:th " " [:i.fa.fa-gear]]
+         [:th [:i.fa.fa-location-arrow] " Whereabouts"]
+         [:th [:i.fa.fa-file-text-o] " Format"]
+         [:th [:i.fa.fa-star-half-o] " Rating"]]]]]))
 
 (defn browse []
   (with-bootstrap "libriot: where books live a full life"

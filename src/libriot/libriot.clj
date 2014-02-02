@@ -6,10 +6,6 @@
             [clj-time.core :refer [now]]
             [clj-time.format :refer :all]))
 
-(defn human-date [d]
-  (let [dt (parse (formatters :year-month-day) d)]
-    (unparse (formatter "dd MMMM yyyy") dt)))
-
 (defn book-search [] "where books live a full life")
 
 (defn find-all []
@@ -20,17 +16,31 @@
                             {:DT_RowId "row_1"
                              :title "Joy of Clojure"
                              :whereabouts "Anatoly"
+                             :contact-id 42
+                             :format "PDF"
                              :rating 4.2}
                             {:DT_RowId "row_2"
                              :title "Functional Programming in Scala"
                              :whereabouts "Some Dude"
+                             :contact-id 48379
+                             :format "ePub"
                              :rating 1.8}
                             {:DT_RowId "row_3"
                              :title "Java Puzzlers"
                              :whereabouts "Dan"
+                             :contact-id 34
+                             :format "PDF"
                              :rating 4.7}
                             {:DT_RowId "row_4"
                              :title "The Future of Java Applets"
                              :whereabouts "Aaron"
+                             :contact-id 17
+                             :format "Mobi"
                              :rating 5.0}
+                            {:DT_RowId "row_5"
+                             :title "Struts: The Good Parts"
+                             :whereabouts "Chariot"
+                             :contact-id "home-base"
+                             :format "EBCDIC"
+                             :rating 0.6}
                             ]}))
