@@ -7,25 +7,29 @@
 
 
 (def $t-books ($ :.t-books))
+(def init? (atom true))
 
 (defn star-rating [row _ rownum _]
-  (let [$rating ($ "td:eq(2)" row)
-        score (.text $rating)]
-    (html $rating "")
-    (add-class $rating "rating")
-    (.raty $rating (clj->js {:score score
-                             :readOnly true}))
-    (html $rating (str (html $rating) " &nbsp&nbsp(" score ")"))))
+  (when @init?
+    (let [$rating ($ "td:eq(2)" row)
+          score (.text $rating)]
+      (html $rating "")
+      (add-class $rating "rating")
+      (.raty $rating (clj->js {:score score
+                               :readOnly true}))
+      (html $rating (str (html $rating) " &nbsp&nbsp(" score ")")))))
 
-(.dataTable $t-books 
-  (clj->js {:sAjaxSource "/browse"
-            :aoColumns [{:mData "title"}
-                        {:mData "whereabouts"}
-                        {:mData "rating" :sWidth "128px"}]
-            :oLanguage {:sLengthMenu ""}
-            :fnRowCallback star-rating
-            :fnInitComplete (fn [] (remove-attr $t-books "style"))}))
-            ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))
+(defn table-it []
+  (.dataTable $t-books 
+    (clj->js {:sAjaxSource "/browse"
+              :aoColumns [{:mData "title"}
+                          {:mData "whereabouts"}
+                          {:mData "rating" :sWidth "128px"}]
+              :oLanguage {:sLengthMenu ""}
+              :fnRowCallback star-rating
+              :fnInitComplete (fn [] (remove-attr $t-books "style") 
+                                     (reset! init? false))})))
+              ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))))
 
 (defn show-library [data]
   (let [details (reader/read-string data)]
@@ -38,3 +42,8 @@
             :data isbn
             :type "POST"
             :success show-library}))
+
+(defn init [] (table-it))
+
+;;TODO: externalize to "base layout: (init)"
+(init)
