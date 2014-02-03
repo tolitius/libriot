@@ -20,6 +20,19 @@
    (include-js "/js/dataTables.bootstrap.js")
    (include-js "/js/libriot.js")))
 
+(defn in-modal [{:keys [clazz title body do-it cancel]}]
+  (let [title-label (str clazz "-label")]
+    [:div.modal.fade {:class (str "modal fade " clazz) :tabindex "-1" :role "dialog" :aria-labelledby title-label :aria-hidden "true"}
+     [:div.modal-dialog
+      [:div.modal-content
+       [:div.modal-header
+        [:button.close {:type "button" :data-dismiss "modal" :aria-hidden "true"} "&times;"]
+        [:h4.modal-title {:id title-label} title]]
+       [:div.modal-body body]
+       [:div.modal-footer
+        [:button.btn.btn-default {:type "button" :data-dismiss "modal"} cancel]
+        [:button.btn.btn-warning {:type "button"} do-it]]]]]))
+
 (defn in-container [{:keys [container-class jumbo-class]} & content]
   (let [c [:div {"class" (str "container " container-class)} content]]
     (if jumbo-class

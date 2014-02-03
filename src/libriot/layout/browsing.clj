@@ -6,16 +6,25 @@
     [:div.row.center [:i.fa.fa-dot-circle-o] " Wonbooking Life " [:i.fa.fa-dot-circle-o]]))
 
 (def add-book-modal
-  [:div.modal.fade.add-book-modal {:tabindex "-1" :role "dialog" :aria-labelledby "add-book-label" :aria-hidden "true"}
-   [:div.modal-dialog
-    [:div.modal-content
-     [:div.modal-header
-      [:button.close {:type "button" :data-dismiss "modal" :aria-hidden "true"} "&times;"]
-      [:h4.modal-title {:id "add-book-label"} "Adding New Book"]]
-     [:div.modal-body "..."]
-     [:div.modal-footer
-      [:button.btn.btn-default {:type "button" :data-dismiss "modal"} "Close"]
-      [:button.btn.btn-warning {:type "button"} "Add"]]]]])
+  (in-modal {:title "Adding New Book" 
+             :clazz` "add-book-modal" 
+             :body [:row [:div "..."]] 
+             :do-it "Add" 
+             :cancel "Close"}))
+
+(def contact-borrower-modal
+  (in-modal {:title "Contact " 
+             :clazz "contact-borrower-modal"
+             :body [:row [:div "..."]] 
+             :do-it "Send" 
+             :cancel "Close"}))
+
+(def lend-book-modal
+  (in-modal {:title "Lending a Book" 
+             :clazz "lend-book-modal"
+             :body [:row [:div "..."]] 
+             :do-it "Lend" 
+             :cancel "Close"}))
 
 (def t-books
   (in-container {:container-class "c-books"}
@@ -33,4 +42,6 @@
   (with-bootstrap "libriot: where books live a full life"
     header
     add-book-modal
+    contact-borrower-modal
+    lend-book-modal
     t-books))

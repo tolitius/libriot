@@ -3,12 +3,14 @@
             [jayq.core :as jq]
             [crate.core :as crate]
             [cljs.reader :as reader])
-  (:use [jayq.core :only [$ html attr add-class remove-attr append]])
+  (:use [jayq.core :only [$ html attr on add-class remove-attr append]])
   (:use-macros [crate.def-macros :only [defpartial]]))
 
 (def $t-books ($ :.t-books))
+(def $contact-modal ($ :.contact-borrower-modal))
+(def $lend-modal ($ :.lend-book-modal))
 (def init? (atom true))
-(def contact-id-col 1)
+(def action-id-col 1)
 (def rating-col 4)
 
 (defn cell-data [col row]
@@ -23,27 +25,34 @@
                              :readOnly true}))
     (html $rating (str (html $rating) " &nbsp&nbsp(" score ")"))))
 
-(defpartial contact-link []
+(defpartial contact-icon []
  [:i.fa.fa-envelope])
 
-(defpartial lend-link []
+(defpartial lend-icon []
  [:i.fa.fa-users])
 
-(defn make-contact-link [row]
-  (let [[$contact id] (cell-data contact-id-col row)]
-    (html $contact "")
+(defn contact-borrower [$contact id row]
+  (add-class $contact "contact-link center")
+  (html $contact (contact-icon))
+  (on $contact :click 
+      (fn [e] (.modal $contact-modal "show"))))
+
+(defn lend-a-book [$lend row]
+  (add-class $lend "lend-link center")
+  (html $lend (lend-icon))
+  (on $lend :click
+      (fn [e] (.modal $lend-modal "show"))))
+
+(defn make-action-link [row]
+  (let [[$cell id] (cell-data action-id-col row)]
+    (html $cell "")
     (if-not (= id "home-base") 
-      (do
-        (add-class $contact "contact-link center")
-        (attr $contact "id" id)
-        (html $contact (contact-link)))
-      (do
-        (add-class $contact "lend-link center")
-        (html $contact (lend-link))))))
+      (contact-borrower $cell id row)
+      (lend-a-book $cell row))))
 
 (defn add-meta [row & _]
   (when @init?
-    (make-contact-link row)
+    (make-action-link row)
     (star-rating row)))
 
 (defpartial search-box [$input]
