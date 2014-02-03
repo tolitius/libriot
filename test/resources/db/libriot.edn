@@ -5,12 +5,16 @@
   ;; add dates (e.g. instant(s))
 
  {:db/id #db/id [:libriot]
-  :book/title "Java Puzzlers"
-  ;...
-  }
-
- {:db/id #db/id [:libriot]
   :book/title "Joy of Clojure"
-  ;...
+  :book/id "978-1935182641"
+  :book/url "http://www.amazon.com/The-Joy-Clojure-Thinking-Way/dp/1935182641"
+  :book/filetype "PDF"
+  :book/description "If you've seen how dozens of lines of Java or Ruby can dissolve into just a few lines of Clojure, you'll know why the authors of this book call it a \"joyful language\". Clojure is a dialect of Lisp that runs on the JVM. It combines the nice features of a scripting language with the powerful features of a production environment—features like persistent data structures and clean multithreading that you'll need for industrial-strength application development."
+  :book/starrating 4.7
+  :book/publisher "Manning Press"
+  :book/edition 1
+  :book/originofsale "Amazon.com"
+  :book/coverurl "http://ecx.images-amazon.com/images/I/51LKOYzkfWL._SX258_PJlook-inside-v2,TopRight,1,0_SH20_BO1,204,203,200_.jpg"
+  :book/price 2989
   }
 ]

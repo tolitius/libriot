@@ -7,8 +7,10 @@ resources/public/js/libriot*
 pom.xml
 *.jar
 *.class
+*.swp
 .lein-deps-sum
 .lein-failures
 .lein-plugins
 .lein-env
 .lein-repl-history
+.nrepl-port
