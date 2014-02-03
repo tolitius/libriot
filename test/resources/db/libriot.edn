@@ -4,6 +4,7 @@
 
   ;; add dates (e.g. instant(s))
 
+;;========================= Books
  {:db/id #db/id [:libriot]
   :book/title "Joy of Clojure"
   :book/author "Michael Fogus"
@@ -106,5 +107,29 @@
   :book/originofsale "Amazon.com"
   :book/coverurl "http://ecx.images-amazon.com/images/I/51YGmfxORmL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
   :book/price 3550
+  }
+;;========================= Borrowers
+ {:db/id #db/id [:libriot]
+  :borrower/id "1"
+  :borrower/name "Anatoly"
+  :borrower/email "anatoly@chariotsolutions.com"
+  }
+ {:db/id #db/id [:libriot]
+  :borrower/id "2"
+  :borrower/name "Dan"
+  :borrower/email "dboykis@chariotsolutions.com"
+  }
+;;========================= Tags
+ {:db/id #db/id [:libriot]
+  :tag/name "Java"
+  }
+ {:db/id #db/id [:libriot]
+  :tag/name "Clojure"
+  }
+ {:db/id #db/id [:libriot]
+  :tag/name "Lisp"
+  }
+ {:db/id #db/id [:libriot]
+  :tag/name "CSS"
   }
 ]
