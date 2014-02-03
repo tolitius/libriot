@@ -39,7 +39,7 @@
   :db.install/_attribute :db.part/db}
 
  {:db/id #db/id[:db.part/db]
-  :db/ident :book/filetype
+  :db/ident :book/file-type
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db/doc "file type of book (PDF,EPUB,..)"
@@ -53,7 +53,7 @@
   :db.install/_attribute :db.part/db}
 
  {:db/id #db/id[:db.part/db]
-  :db/ident :book/starrating
+  :db/ident :book/star-rating
   :db/valueType :db.type/float
   :db/cardinality :db.cardinality/one
   :db/doc "Average rating for book"
@@ -74,14 +74,14 @@
   :db.install/_attribute :db.part/db}
 
  {:db/id #db/id[:db.part/db]
-  :db/ident :book/originofsale
+  :db/ident :book/origin-of-sale
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db/doc "Where was this book bought?"
   :db.install/_attribute :db.part/db}
 
  {:db/id #db/id[:db.part/db]
-  :db/ident :book/coverurl
+  :db/ident :book/cover-url
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db/doc "Link to image of book"
