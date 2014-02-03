@@ -3,7 +3,7 @@
             [jayq.core :as jq]
             [crate.core :as crate]
             [cljs.reader :as reader])
-  (:use [jayq.core :only [$ html attr add-class remove-attr]])
+  (:use [jayq.core :only [$ html attr add-class remove-attr append]])
   (:use-macros [crate.def-macros :only [defpartial]]))
 
 (def $t-books ($ :.t-books))
@@ -56,6 +56,10 @@
         $input ($ ".t-search label input")]
     (html $search (search-box $input))))
 
+(defn add-book-button []
+  (append ($ :.add-book-link)
+          (crate/html [:button.btn.btn-warning [:i.fa.fa-plus-circle " New Book"]])))
+
 (defn table-it []
   (.dataTable $t-books 
     (clj->js {:sAjaxSource "/browse"
@@ -71,9 +75,10 @@
               :fnRowCallback add-meta
               :fnInitComplete (fn [] (remove-attr $t-books "style") 
                                      (bootstrap-search-box)
+                                     (add-book-button)
                                      (reset! init? false))
               ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))))
-              :sDom "<'row'<'col-xs-6 t-search'f><'col-xs-6'l>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"})))
+              :sDom "<'row t-books-head'<'col-xs-2'l><'col-xs-offset-2 col-xs-4 t-search'f><'col-xs-offset-2 col-xs-2 add-book-link'>r>t<'row t-books-foot'<'col-xs-6'i><'col-xs-6'p>>"})))
 
 (defn show-library [data]
   (let [details (reader/read-string data)]

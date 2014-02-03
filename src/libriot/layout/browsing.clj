@@ -2,8 +2,8 @@
   (:require [libriot.layout.base :refer :all]))
 
 (defn header []
-  (in-container {:container-class "browse" :jumbo-class "c-header"}
-    [:div.row.center "it's a wonbooking life"]))
+  (in-container {:container-class "browse-head" :jumbo-class "c-header"}
+    [:div.row.center [:i.fa.fa-dot-circle-o] " Wonbooking Life " [:i.fa.fa-dot-circle-o]]))
 
 (def t-books
   (in-container {:container-class "c-books"}

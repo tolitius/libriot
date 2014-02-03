@@ -2,14 +2,32 @@
     text-align: center;
 }
 
-.q-hidden {
-    display: none;
+.browse-head {
+    color: rgba(253, 30, 0, 0.42);
+    font-size: 1.5em;
+}
+
+.browse-head i {
+    font-size: 0.3em;
 }
 
 .t-books th i {
     margin: 0px 8px;
     font-size: 1.2em;
     color: rgba(128, 128, 128, 0.52);;
+}
+
+.t-books-head, .t-books-foot {
+    padding: 0px 10px;
+}
+
+.t-books-foot {
+    margin-top: 15px;
+}
+
+.add-book-link {
+    text-align: right;
+    margin-bottom: 15px;
 }
 
 .rating {
@@ -49,7 +67,8 @@
 
 .c-header {
     background: rgba(221, 182, 157, 0.1);
-    padding-bottom: 10px;
+    padding: 30px 0px;
+    margin-bottom: 40px;
 }
 
 .o-footer {
