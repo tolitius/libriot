@@ -1,6 +1,7 @@
 (ns libriot.browsing
   (:require [libriot.thingies :refer [fade-out-in info info->js]]
             [jayq.core :as jq]
+            [crate.core :as crate]
             [cljs.reader :as reader])
   (:use [jayq.core :only [$ html attr add-class remove-attr]])
   (:use-macros [crate.def-macros :only [defpartial]]))
@@ -45,6 +46,16 @@
     (make-contact-link row)
     (star-rating row)))
 
+(defpartial search-box [$input]
+ [:div.input-group $input
+  [:span.input-group-addon
+   [:i.fa.fa-search]]])
+
+(defn bootstrap-search-box []
+  (let [$search ($ ".t-search label")
+        $input ($ ".t-search label input")]
+    (html $search (search-box $input))))
+
 (defn table-it []
   (.dataTable $t-books 
     (clj->js {:sAjaxSource "/browse"
@@ -54,11 +65,15 @@
                           {:mData "format" :sClass "center"}
                           {:mData "rating" :sWidth "128px"}]
               :aaSorting [[rating-col "desc"]]
-              :oLanguage {:sLengthMenu ""}
+              :oLanguage {:sLengthMenu ""
+                          :sInfo "Showing _START_ to _END_ of _TOTAL_ books"
+                          :sSearch ""}
               :fnRowCallback add-meta
               :fnInitComplete (fn [] (remove-attr $t-books "style") 
-                                     (reset! init? false))})))
+                                     (bootstrap-search-box)
+                                     (reset! init? false))
               ;; :sDom "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"}))))
+              :sDom "<'row'<'col-xs-6 t-search'f><'col-xs-6'l>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"})))
 
 (defn show-library [data]
   (let [details (reader/read-string data)]
