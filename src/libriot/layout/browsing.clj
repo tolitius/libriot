@@ -1,9 +1,21 @@
 (ns libriot.layout.browsing
   (:require [libriot.layout.base :refer :all]))
 
-(defn header []
+(def header
   (in-container {:container-class "browse-head" :jumbo-class "c-header"}
     [:div.row.center [:i.fa.fa-dot-circle-o] " Wonbooking Life " [:i.fa.fa-dot-circle-o]]))
+
+(def add-book-modal
+  [:div.modal.fade.add-book-modal {:tabindex "-1" :role "dialog" :aria-labelledby "add-book-label" :aria-hidden "true"}
+   [:div.modal-dialog
+    [:div.modal-content
+     [:div.modal-header
+      [:button.close {:type "button" :data-dismiss "modal" :aria-hidden "true"} "&times;"]
+      [:h4.modal-title {:id "add-book-label"} "Adding New Book"]]
+     [:div.modal-body "..."]
+     [:div.modal-footer
+      [:button.btn.btn-default {:type "button" :data-dismiss "modal"} "Close"]
+      [:button.btn.btn-warning {:type "button"} "Add"]]]]])
 
 (def t-books
   (in-container {:container-class "c-books"}
@@ -19,5 +31,6 @@
 
 (defn browse []
   (with-bootstrap "libriot: where books live a full life"
-    (header)
+    header
+    add-book-modal
     t-books))

@@ -54,11 +54,13 @@
 (defn bootstrap-search-box []
   (let [$search ($ ".t-search label")
         $input ($ ".t-search label input")]
+    (attr $input "autofocus" "true")
     (html $search (search-box $input))))
 
 (defn add-book-button []
   (append ($ :.add-book-link)
-          (crate/html [:button.btn.btn-warning [:i.fa.fa-plus-circle " New Book"]])))
+          (crate/html [:button.btn.btn-warning {:data-toggle "modal" :data-target ".add-book-modal"} 
+                       [:i.fa.fa-plus-circle " New Book"]])))
 
 (defn table-it []
   (.dataTable $t-books 
