@@ -8,6 +8,7 @@
 
 (def $t-books ($ :.t-books))
 (def $contact-modal ($ :.contact-borrower-modal))
+(def $contact-modal-title ($ ".contact-borrower-modal .modal-title"))
 (def $lend-modal ($ :.lend-book-modal))
 (def init? (atom true))
 (def action-id-col 1)
@@ -35,7 +36,9 @@
   (add-class $contact "contact-link center")
   (html $contact (contact-icon))
   (on $contact :click 
-      (fn [e] (.modal $contact-modal "show"))))
+      (fn [e] 
+        (html $contact-modal-title (str "Contact " id))
+        (.modal $contact-modal "show"))))
 
 (defn lend-a-book [$lend row]
   (add-class $lend "lend-link center")
