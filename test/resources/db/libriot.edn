@@ -3,121 +3,16 @@
   ;; :db/txInstant #inst "2013-05-09T13:09:09.009-00:00"}
 
   ;; add dates (e.g. instant(s))
-
-;;========================= Books
- {:db/id #db/id [:libriot]
-  :book/title "Joy of Clojure"
-  :book/author "Michael Fogus"
-  :book/id "978-1935182641"
-  :book/url "http://www.amazon.com/The-Joy-Clojure-Thinking-Way/dp/1935182641"
-  :book/filetype "PDF"
-  :book/description "If you've seen how dozens of lines of Java or Ruby can dissolve into just a few lines of Clojure, you'll know why the authors of this book call it a \"joyful language\". Clojure is a dialect of Lisp that runs on the JVM. It combines the nice features of a scripting language with the powerful features of a production environment—features like persistent data structures and clean multithreading that you'll need for industrial-strength application development."
-  :book/starrating 4.7
-  :book/publisher "Manning Press"
-  :book/edition 1
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/51LKOYzkfWL._SX258_PJlook-inside-v2,TopRight,1,0_SH20_BO1,204,203,200_.jpg"
-  :book/price 2989
-  }
-
- {:db/id #db/id [:libriot]
-  :book/title "JavaScript & JQuery: Interactive Front-End Web Development"
-  :book/author "Jon Duckett"
-  :book/id "978-1118531648"
-  :book/url "http://www.amazon.com/gp/product/1118531647/"
-  :book/filetype "PDF"
-  :book/description "This full-color book adopts a visual approach to teaching JavaScript & jQuery, showing you how to make web pages more interactive and interfaces more intuitive through the use of inspiring code examples, infographics, and photography. The content assumes no previous programming experience, other than knowing how to create a basic web page in HTML & CSS. You'll learn how to achieve techniques seen on many popular websites (such as adding animation, tabbed panels, content sliders, form validation, interactive galleries, and sorting data).."
-  :book/starrating 0.0
-  :book/publisher "Wiley"
-  :book/edition 1
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/41uyfSEwr0L._SY300_.jpg"
-  :book/price 2541
-  }
-
- {:db/id #db/id [:libriot]
-  :book/title "Introduction to Algorithms"
-  :book/author "Thomas H. Cormen"
-  :book/id "978-0262033848"
-  :book/url "http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844/"
-  :book/filetype "EPUB"
-  :book/description "Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study. The algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The explanations have been kept elementary without sacrificing depth of coverage or mathematical rigor. The first edition became a widely used text in universities worldwide as well as the standard reference for professionals. The second edition featured new chapters on the role of algorithms, probabilistic analysis and randomized algorithms, and linear programming. The third edition has been revised and updated throughout. It includes two completely new chapters, on van Emde Boas trees and multithreaded algorithms, substantial additions to the chapter on recurrence (now called \"Divide-and-Conquer\"), and an appendix on matrices. It features improved treatment of dynamic programming and greedy algorithms and a new notion of edge-based flow in the material on flow networks. Many new exercises and problems have been added for this edition. As of the third edition, this textbook is published exclusively by the MIT Press."
-  :book/starrating 4.1
-  :book/publisher "MIT Press"
-  :book/edition 3
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/41kXXE4mAKL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
-  :book/price 7931
-  }
-
- {:db/id #db/id [:libriot]
-  :book/title "Effective Java"
-  :book/author "Joshua Bloch"
-  :book/id "978-0321356680"
-  :book/url "http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683/"
-  :book/filetype "PDF"
-  :book/description "Are you looking for a deeper understanding of the Java™ programming language so that you can write code that is clearer, more correct, more robust, and more reusable? Look no further! Effective Java™, Second Edition, brings together seventy-eight indispensable programmer’s rules of thumb: working, best-practice solutions for the programming challenges you encounter every day."
-  :book/starrating 4.88
-  :book/publisher "Addison-Wesley"
-  :book/edition 2
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/51J1rHXaovL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
-  :book/price 3733
-  }
-
- {:db/id #db/id [:libriot]
-  :book/title "Java Concurrency in Practice"
-  :book/author "Brian Goetz"
-  :book/id "978-0321349606"
-  :book/url "http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601/"
-  :book/filetype "PDF"
-  :book/description "I was fortunate indeed to have worked with a fantastic team on the design and implementation of the concurrency features added to the Java platform in Java 5.0 and Java 6. Now this same team provides the best explanation yet of these new features, and of concurrency in general. Concurrency is no longer a subject for advanced users only. Every Java developer should read this book. --Martin Buchholz JDK Concurrency Czar, Sun Microsystems"
-  :book/starrating 4.49
-  :book/publisher "Addison-Wesley"
-  :book/edition 1
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/51Xvq-8W6vL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
-  :book/price 3848
-  }
-
- {:db/id #db/id [:libriot]
-  :book/title "Structure and Interpretation of Computer Programs"
-  :book/author "Harold Abelson"
-  :book/id "978-0262510875"
-  :book/url "http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871/"
-  :book/filetype "PDF"
-  :book/description "Structure and Interpretation of Computer Programs has had a dramatic impact on computer science curricula over the past decade. This long-awaited revision contains changes throughout the text.There are new implementations of most of the major programming systems in the book, including the interpreters and compilers, and the authors have incorporated many small changes that reflect their experience teaching the course at MIT since the first edition was published.A new theme has been introduced that emphasizes the central role played by different approaches to dealing with time in computational models: objects with state, concurrent programming, functional programming and lazy evaluation, and nondeterministic programming. There are new example sections on higher-order procedures in graphics and on applications of stream processing in numerical programming, and many new exercises.In addition, all the programs have been reworked to run in any Scheme implementation that adheres to the IEEE standard."
-  :book/starrating 3.84
-  :book/publisher "MIT Press"
-  :book/edition 2
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/51H17R%2BbW8L._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
-  :book/price 4454
-  }
- {:db/id #db/id [:libriot]
-  :book/title "Java¿ Puzzlers: Traps, Pitfalls, and Corner Cases"
-  :book/author "Joshua Bloch"
-  :book/id "978-0321336781"
-  :book/url "http://www.amazon.com/Java%C2%BF-Puzzlers-Traps-Pitfalls-Corner/dp/032133678X"
-  :book/filetype "PDF"
-  :book/description " laughed, I cried, I threw up (my hands in admiration). --Tim Peierls, president, Prior Artisans LLC, and member of the JSR 166 Expert Group"
-  :book/starrating 4.61
-  :book/publisher "Addison-Wesley"
-  :book/edition 1
-  :book/originofsale "Amazon.com"
-  :book/coverurl "http://ecx.images-amazon.com/images/I/51YGmfxORmL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
-  :book/price 3550
-  }
 ;;========================= Borrowers
  {:db/id #db/id [:libriot]
   :borrower/id "1"
   :borrower/name "Anatoly"
-  :borrower/email "anatoly@chariotsolutions.com"
+  :borrower/email "anatoly@company.com"
   }
  {:db/id #db/id [:libriot]
   :borrower/id "2"
   :borrower/name "Dan"
-  :borrower/email "dboykis@chariotsolutions.com"
+  :borrower/email "dan@company.com"
   }
 ;;========================= Tags
  {:db/id #db/id [:libriot]
@@ -131,5 +26,110 @@
   }
  {:db/id #db/id [:libriot]
   :tag/name "CSS"
+  }
+;;========================= Books
+ {:db/id #db/id [:libriot]
+  :book/title "Joy of Clojure"
+  :book/author "Michael Fogus"
+  :book/id "978-1935182641"
+  :book/url "http://www.amazon.com/The-Joy-Clojure-Thinking-Way/dp/1935182641"
+  :book/file-type "PDF"
+  :book/description "If you've seen how dozens of lines of Java or Ruby can dissolve into just a few lines of Clojure, you'll know why the authors of this book call it a \"joyful language\". Clojure is a dialect of Lisp that runs on the JVM. It combines the nice features of a scripting language with the powerful features of a production environment—features like persistent data structures and clean multithreading that you'll need for industrial-strength application development."
+  :book/star-rating 4.7
+  :book/publisher "Manning Press"
+  :book/edition 1
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/51LKOYzkfWL._SX258_PJlook-inside-v2,TopRight,1,0_SH20_BO1,204,203,200_.jpg"
+  :book/price 2989
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "JavaScript & JQuery: Interactive Front-End Web Development"
+  :book/author "Jon Duckett"
+  :book/id "978-1118531648"
+  :book/url "http://www.amazon.com/gp/product/1118531647/"
+  :book/file-type "PDF"
+  :book/description "This full-color book adopts a visual approach to teaching JavaScript & jQuery, showing you how to make web pages more interactive and interfaces more intuitive through the use of inspiring code examples, infographics, and photography. The content assumes no previous programming experience, other than knowing how to create a basic web page in HTML & CSS. You'll learn how to achieve techniques seen on many popular websites (such as adding animation, tabbed panels, content sliders, form validation, interactive galleries, and sorting data).."
+  :book/star-rating 0.0
+  :book/publisher "Wiley"
+  :book/edition 1
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/41uyfSEwr0L._SY300_.jpg"
+  :book/price 2541
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Introduction to Algorithms"
+  :book/author "Thomas H. Cormen"
+  :book/id "978-0262033848"
+  :book/url "http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844/"
+  :book/file-type "EPUB"
+  :book/description "Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study. The algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The explanations have been kept elementary without sacrificing depth of coverage or mathematical rigor. The first edition became a widely used text in universities worldwide as well as the standard reference for professionals. The second edition featured new chapters on the role of algorithms, probabilistic analysis and randomized algorithms, and linear programming. The third edition has been revised and updated throughout. It includes two completely new chapters, on van Emde Boas trees and multithreaded algorithms, substantial additions to the chapter on recurrence (now called \"Divide-and-Conquer\"), and an appendix on matrices. It features improved treatment of dynamic programming and greedy algorithms and a new notion of edge-based flow in the material on flow networks. Many new exercises and problems have been added for this edition. As of the third edition, this textbook is published exclusively by the MIT Press."
+  :book/star-rating 4.1
+  :book/publisher "MIT Press"
+  :book/edition 3
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/41kXXE4mAKL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
+  :book/price 7931
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Effective Java"
+  :book/author "Joshua Bloch"
+  :book/id "978-0321356680"
+  :book/url "http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683/"
+  :book/file-type "PDF"
+  :book/description "Are you looking for a deeper understanding of the Java™ programming language so that you can write code that is clearer, more correct, more robust, and more reusable? Look no further! Effective Java™, Second Edition, brings together seventy-eight indispensable programmer’s rules of thumb: working, best-practice solutions for the programming challenges you encounter every day."
+  :book/star-rating 4.88
+  :book/publisher "Addison-Wesley"
+  :book/edition 2
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/51J1rHXaovL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
+  :book/price 3733
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Java Concurrency in Practice"
+  :book/author "Brian Goetz"
+  :book/id "978-0321349606"
+  :book/url "http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601/"
+  :book/file-type "PDF"
+  :book/description "I was fortunate indeed to have worked with a fantastic team on the design and implementation of the concurrency features added to the Java platform in Java 5.0 and Java 6. Now this same team provides the best explanation yet of these new features, and of concurrency in general. Concurrency is no longer a subject for advanced users only. Every Java developer should read this book. --Martin Buchholz JDK Concurrency Czar, Sun Microsystems"
+  :book/star-rating 4.49
+  :book/publisher "Addison-Wesley"
+  :book/edition 1
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/51Xvq-8W6vL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
+  :book/price 3848
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Structure and Interpretation of Computer Programs"
+  :book/author "Harold Abelson"
+  :book/id "978-0262510875"
+  :book/url "http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871/"
+  :book/file-type "PDF"
+  :book/description "Structure and Interpretation of Computer Programs has had a dramatic impact on computer science curricula over the past decade. This long-awaited revision contains changes throughout the text.There are new implementations of most of the major programming systems in the book, including the interpreters and compilers, and the authors have incorporated many small changes that reflect their experience teaching the course at MIT since the first edition was published.A new theme has been introduced that emphasizes the central role played by different approaches to dealing with time in computational models: objects with state, concurrent programming, functional programming and lazy evaluation, and nondeterministic programming. There are new example sections on higher-order procedures in graphics and on applications of stream processing in numerical programming, and many new exercises.In addition, all the programs have been reworked to run in any Scheme implementation that adheres to the IEEE standard."
+  :book/star-rating 3.84
+  :book/publisher "MIT Press"
+  :book/edition 2
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/51H17R%2BbW8L._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
+  :book/price 4454
+  }
+
+ {:db/id #db/id [:libriot]
+  :book/title "Java¿ Puzzlers: Traps, Pitfalls, and Corner Cases"
+  :book/author "Joshua Bloch"
+  :book/id "978-0321336781"
+  :book/url "http://www.amazon.com/Java%C2%BF-Puzzlers-Traps-Pitfalls-Corner/dp/032133678X"
+  :book/file-type "PDF"
+  :book/description " laughed, I cried, I threw up (my hands in admiration). --Tim Peierls, president, Prior Artisans LLC, and member of the JSR 166 Expert Group"
+  :book/star-rating 4.61
+  :book/publisher "Addison-Wesley"
+  :book/edition 1
+  :book/origin-of-sale "Amazon.com"
+  :book/cover-url "http://ecx.images-amazon.com/images/I/51YGmfxORmL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg"
+  :book/price 3550
   }
 ]
