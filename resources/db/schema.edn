@@ -4,30 +4,182 @@
 
  ;; {:db/id #db/id [:db.part/tx] 
  ;;  :db/txInstant #inst "2014-05-01T13:09:09.009-00:00"}
+;; Book
+;;=============================
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/index true
+  :db/doc "book title"
+  :db.install/_attribute :db.part/db}
 
-  ;;                                                title
-  ;; =======================================================
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/author
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/doc "author's name"
+  :db.install/_attribute :db.part/db}
 
-  {:db/id #db/id[:db.part/db]
-   :db/ident :book/title
-   :db/valueType :db.type/string
-   :db/cardinality :db.cardinality/one
-   :db/fulltext true
-   :db/index true
-   :db/doc "book title"
-   :db.install/_attribute :db.part/db}
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/id
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/doc "isbn or another accepted identifier"
+  :db.install/_attribute :db.part/db}
 
-  ;;                                               author
-  ;; =======================================================
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "URL for book file"
+  :db.install/_attribute :db.part/db}
 
-  {:db/id #db/id[:db.part/db]
-   :db/ident :book/author
-   :db/valueType :db.type/string
-   :db/cardinality :db.cardinality/one
-   :db/fulltext true
-   :db/doc "author's name"
-   :db.install/_attribute :db.part/db}
- 
-   ;; ...
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/filetype
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "file type of book (PDF,EPUB,..)"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Book description"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/starrating
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
+  :db/doc "Average rating for book"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/publisher
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Publisher"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/edition
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "Edition number"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/originofsale
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Where was this book bought?"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/coverurl
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Link to image of book"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/price
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "Book price in cents"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/borrower
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Borrower of the book"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/tags
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "Different tags associated with book (Angular, JS, Node...)"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :book/reviews
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/fulltext true
+  :db/doc "Book reviews"
+  :db.install/_attribute :db.part/db}
+
+;; Borrower
+;;=============================
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :borrower/id
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/doc "Borrower's Id"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :borrower/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Name"
+  :db/fulltext true
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :borrower/email
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Email"
+  :db/fulltext true
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :borrower/reviews
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/fulltext true
+  :db/doc "Reviews written by borrower"
+  :db.install/_attribute :db.part/db}
+
+;; Tags
+;;=============================
+ {:db/id #db/id[:db.part/db]
+  :db/ident :tag/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Tag name"
+  :db.install/_attribute :db.part/db}
+
+;; Review
+;;=============================
+ {:db/id #db/id[:db.part/db]
+  :db/ident :review/subject
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Title for review"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :review/body
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Content of the review"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :review/author
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Author of review, points to borrower"
+  :db.install/_attribute :db.part/db}
 ]
-

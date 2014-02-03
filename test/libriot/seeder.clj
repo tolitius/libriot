@@ -1,3 +1,6 @@
+;;(data-from "datomic:free://localhost:4334/libriot" "resources/db/schema.edn")
+;;(def data-tx (read-string (slurp "test/resources/db/libriot.edn")))
+;;@(d/transact *conn* data-tx)
 (ns libriot.seeder
   (:require [clojure.edn :as edn])
   (:use libriot.dbnator
@@ -28,6 +31,12 @@
     ;; (eval (do (use '[datomic.api :only (db) :as d]) (read-datomic-edn path))))
     (read-datomic-edn path))
   (info "data from \"" path "\" loaded to [" uri "]"))
+
+(defn load-test-data [uri path mockdata-path]
+  (let [data-tx (read-string (slurp mockdata-path))]
+    (do (data-from uri path) 
+        @(d/transact *conn* data-tx))))
+        
 
 (defn delete-test-db [uri]
   (d/delete-database uri)
