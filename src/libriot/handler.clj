@@ -1,5 +1,5 @@
 (ns libriot.handler
-  (:require [libriot :refer [find-all]]
+  (:require [libriot :refer [find-all find-contact-template]]
             [libriot.layout 
              [browsing :refer [browse]]
              ]
@@ -10,6 +10,7 @@
 (defroutes app-routes
   (GET "/" [] (browse))
   (GET "/browse" [] (find-all))
+  (GET "/contact-template" [] (find-contact-template))
   ;; ...
   (route/resources "/")
   (route/not-found "not found"))

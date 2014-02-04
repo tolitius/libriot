@@ -8,7 +8,8 @@
 
 (def $t-books ($ :.t-books))
 
-;; datatable "magic number" legacy
+;; datatable "magic number" legacy (in order to fetch in :fnRowCallback)
+(def book-title-col 0)
 (def action-id-col 1)
 (def borrower-name-col 2)
 (def rating-col 4)

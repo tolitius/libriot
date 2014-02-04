@@ -1,8 +1,8 @@
 (ns libriot.browse
   (:require [libriot.thingies :refer [fade-out-in info info->js]]
-            [libriot.pieces.books-table :refer [cell-data bootstrap-search-box] :as bt]
+            [libriot.pieces.books-table :refer [cell-data bootstrap-search-box table-it] :as bt]
             [libriot.pieces.add-book :refer [add-book add-book-button]]
-            [libriot.pieces.contact-borrower :refer [contact-borrower]]
+            [libriot.pieces.contact-borrower :refer [contact-borrower prepare-contact-template]]
             [libriot.pieces.lend-book :refer [lend-a-book]]
             [jayq.core :refer [$ html attr on add-class remove-attr append]]
             [crate.core :as crate]
@@ -45,7 +45,8 @@
     ))
 
 (defn init [] 
-  (bt/table-it $t-books init-books-table add-meta))
+  (table-it $t-books init-books-table add-meta)
+  (prepare-contact-template))
 
 ;;TODO: externalize to "base layout: (init)"
 (init)

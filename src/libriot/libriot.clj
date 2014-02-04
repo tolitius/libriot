@@ -8,6 +8,12 @@
 
 (defn book-search [] "where books live a full life")
 
+(defn find-contact-template []
+  "Dear n####,</br></br>
+   By the power vested in me, I urge you to return b#### back to our library.<br/><br/>
+   Thank you,<br/>
+   Your Book Master")
+
 (defn find-all []
   (json/write-str {:id -1 
                    :fieldErrors []
