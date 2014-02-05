@@ -2,6 +2,18 @@
     text-align: center;
 }
 
+.search-book {
+    margin-top: 15px;
+}
+
+.search-book .fa-barcode {
+    font-size: 1.4em;
+}
+
+.search-book .fa-search {
+    color: rgba(60, 40, 30, 0.7);
+}
+
 .browse-head {
     color: rgba(253, 30, 0, 0.42);
     font-size: 1.5em;

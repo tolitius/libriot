@@ -8,7 +8,11 @@
 (def add-book-modal
   (in-modal {:title "Adding New Book" 
              :clazz` "add-book-modal" 
-             :body [:row [:div "..."]] 
+             :body [:div.row.search-book
+                    [:div.input-group.col-xs-offset-2.col-xs-6
+                     [:span.input-group-addon [:i.fa.fa-barcode]]
+                     [:input.form-control {:type "text" :autofocus "autofocus" :placeholder "add by ISBN"}]]
+                    [:button.btn.btn-default [:i.fa.fa-search]]]
              :do-it "Add" 
              :cancel "Close"}))
 

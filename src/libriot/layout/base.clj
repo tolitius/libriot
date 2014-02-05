@@ -22,7 +22,7 @@
 
 (defn in-modal [{:keys [clazz title body do-it cancel]}]
   (let [title-label (str clazz "-label")]
-    [:div.modal.fade {:class (str "modal fade " clazz) :tabindex "-1" :role "dialog" :aria-labelledby title-label :aria-hidden "true"}
+    [:div.modal.fade {:class (str "modal fade " clazz) :role "dialog" :aria-labelledby title-label :aria-hidden "true"}
      [:div.modal-dialog
       [:div.modal-content
        [:div.modal-header
@@ -30,8 +30,8 @@
         [:h4.modal-title {:id title-label} title]]
        [:div.modal-body body]
        [:div.modal-footer
-        [:button.btn.btn-default {:type "button" :data-dismiss "modal"} cancel]
-        [:button.btn.btn-warning {:type "button"} do-it]]]]]))
+        [:button.btn.btn-default.cancel-btn {:type "button" :data-dismiss "modal"} cancel]
+        [:button.btn.btn-warning.do-it-btn {:type "button"} do-it]]]]]))
 
 (defn in-container [{:keys [container-class jumbo-class]} & content]
   (let [c [:div {"class" (str "container " container-class)} content]]
