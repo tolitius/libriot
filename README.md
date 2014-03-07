@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.github.com/tolitius/libriot/master/docs/show-time.png" alt="libriot live"/>
+</p>
+
 ##Where Books Live a Full Life
 
 * Library buys e-books. Each one is from a given publisher, and
