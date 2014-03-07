@@ -18,7 +18,7 @@
                  [org.clojure/clojure "1.5.1"]]
 
   :plugins [[lein-ring "0.8.8"]
-            [lein-cljsbuild "1.0.0-alpha2"]]
+            [lein-cljsbuild "1.0.2"]]
 
   :hooks [leiningen.cljsbuild]
 
@@ -27,7 +27,7 @@
               :compiler {:output-to "resources/public/js/libriot.js"
                          :optimizations :whitespace
                          :pretty-print true
-                         :source-map "resources/public/js/libriot.js.map"
+                         ;; :source-map "resources/public/js/libriot.js.map"
                          }}]}
 
   :ring {:handler libriot.handler/app}
